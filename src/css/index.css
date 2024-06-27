@@ -2,4 +2,133 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #000;
+  list-style: none;
+  border: 0;
+}
+
+.wrapper {
+  margin-top: 10em;
+  margin-left: 5em;
+}
+
+.wrapper h1 {
+  font-size: 5em;
+  color: rgb(16, 16, 17);
+  text-shadow: 10px 10px 50px #252427;
+}
+
+.wrapper p {
+  font-size: larger;
+  text-shadow: 10px 10px 50px #252427;
+  margin-left: 0.8em;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 700ms linear;
+}
+
+.card {
+  width: 136.7%;
+  height: inherit;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transform: skew(-10deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1000ms linear;
+}
+
+.active {
+  clip-path: polygon(9% 0, 100% 0%, 90% 100%, 0% 100%);
+  z-index: -999;
+  opacity: 1;
+  transition: all 1000ms linear;
+}
+
+@keyframes slideForward {
+  from {
+    transform: translateX(12000);
+    z-index: -999999999;
+  }
+}
+
+@keyframes slideBackward {
+  from {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes popUpCardActive {
+  from {
+    transform: translateX(-1000px);
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 1em 2em;
+  background-color: rgba(252, 252, 252, 0.63);
+  background-color: #ffff;
+  z-index: 99999;
+  transition: all 100ms linear;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header:hover {
+  background-color: #ffff;
+  transition: all 100ms linear;
+}
+
+.cadastroContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: inherit;
+  gap: 0.5em;
+}
+
+.logoContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  height: 40px;
+  padding: 0.5em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.btnForwardSlide {
+  width: 200px;
+  margin-top: 2em;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  background-color: transparent;
+  cursor: pointer;
 }

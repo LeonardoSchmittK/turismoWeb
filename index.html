@@ -7,16 +7,59 @@
     <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
-    <div class="">
-      <button onclick="entrar()" class="entrar">Entrar</button>
-      <button onclick="cadastrarNovoUsuario()" class="cadastrar">
-        Cadastrar
-      </button>
-      <button onclick="sair()" class="sair">Sair</button>
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <li><a href="">Sobre</a></li>
+          <li><a href="">Sobre</a></li>
+          <li><a href="">Sobre</a></li>
+        </ul>
+      </nav>
 
-      <h1 class="usuario"></h1>
+      <div class="logoContainer">
+        <p>TWB</p>
+      </div>
+      <div class="cadastroContainer">
+        <button onclick="entrar()" class="entrar">Entrar</button>
+        <button onclick="cadastrarNovoUsuario()" class="cadastrar">
+          Cadastrar
+        </button>
+        <button onclick="sair()" class="sair">Sair</button>
+
+        <p class="usuario"></p>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <head class="cabecalho">
+        <h1>TurismoWEB</h1>
+        <p>Conheça lugares incríveis com todos os detalhes.</p>
+        <section>
+          <!-- <button onclick="slider.slide(SLIDER_ACTIONS.DOWN)"></button> -->
+          <button
+            class="btnForwardSlide"
+            onclick="slider.slide(SLIDER_ACTIONS.UP)"
+          >
+            <svg
+              width="50"
+              height="50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              class="iconSlider"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </section>
+      </head>
+      <div class="slider"></div>
     </div>
     <script src="./js/cadastro.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
