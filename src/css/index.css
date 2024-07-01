@@ -4,9 +4,12 @@
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
-  color: #000;
   list-style: none;
   border: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -16,8 +19,9 @@
 
 .wrapper h1 {
   font-size: 5em;
-  color: rgb(16, 16, 17);
   text-shadow: 10px 10px 50px #252427;
+  font-family: "Architects Daughter", cursive;
+  color: rgb(255, 255, 255);
 }
 
 .wrapper p {
@@ -58,14 +62,14 @@
 
 @keyframes slideForward {
   from {
-    transform: translateX(12000);
+    transform: translateX(124);
     z-index: -999999999;
   }
 }
 
 @keyframes slideBackward {
   from {
-    transform: translateX(-400px);
+    transform: translateX(-100px);
   }
 }
 
@@ -108,7 +112,18 @@
 
 button {
   height: 40px;
-  padding: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  transition: all 100ms linear;
+}
+
+a:hover {
+  color: #51b7ff;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: all 100ms linear;
 }
 
 .nav {
@@ -125,10 +140,34 @@ button {
 
 .btnForwardSlide {
   width: 200px;
-  margin-top: 2em;
   display: flex;
   justify-content: start;
   align-items: start;
   background-color: transparent;
   cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btnForwardSlide {
+  opacity: 0.5;
+}
+
+.subtitulo {
+  background: linear-gradient(45deg, #fff 50%, transparent);
+  width: 20%;
+  padding: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .subtitulo {
+    width: 100%;
+    background: #ffff;
+  }
+
+  .titulo {
+    margin-left: -50px;
+  }
 }

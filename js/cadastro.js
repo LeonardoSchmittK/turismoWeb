@@ -30,7 +30,16 @@ checarBanco();
 
 function cadastrarNovoUsuario() {
   let login = prompt("Qual o username?");
+
+  if (!login) {
+    return;
+  }
   let senha = prompt("Qual a senha?");
+
+  if (!senha) {
+    return;
+  }
+
   let naoMostrarSenhaQuantidade = senha.length;
   let naoMostrarSenha = "";
   for (let i = 0; i < naoMostrarSenhaQuantidade; ++i) {
@@ -60,7 +69,16 @@ function cadastrarNovoUsuario() {
 
 function entrar() {
   let loginQuerendoEntrar = prompt("Qual o username?");
+
+  if (!loginQuerendoEntrar) {
+    return;
+  }
   let senhaQuerendoEntrar = prompt("Qual a senha?");
+
+  if (!senhaQuerendoEntrar) {
+    return;
+  }
+
   const usuariosJaCadastrados = JSON.parse(localStorage.getItem("usuarios"));
 
   for (let i = 0; i < usuariosJaCadastrados.length; ++i) {
