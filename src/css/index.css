@@ -91,6 +91,8 @@ body {
   transition: all 100ms linear;
   display: flex;
   justify-content: space-between;
+  top: 0;
+  position: fixed;
 }
 
 .header:hover {
@@ -173,4 +175,206 @@ button {
   .titulo {
     margin-left: -50px;
   }
+}
+.segundaSecao{
+  display: flex;
+  justify-content: space-around;
+  background-color: #CFFC;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.imagensSegunda{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+.tituloImagens{
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+}
+
+.botoesSaber {
+  position: relative;
+  margin: 0;
+  padding: 0.8em 1em;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #53bae3;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: "Architects Daughter", cursive;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.botoesSaber:hover {
+  animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(7deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-7deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+.botoesSaber:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+.botoesSaber::before,
+.botoesSaber::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.botoesSaber:hover::before,
+.botoesSaber:hover::after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.botoesSaber:hover::before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.botoesSaber:hover::after {
+  transform: translate(50%, 0) scale(1.1);
+}
+
+
+
+#footer{
+  background-color:black;
+  color: white;
+  padding: 80px 60px;
+}
+
+#footer .footer-content {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#footer .footer-content .footer-menu{
+  margin: 0 60px;
+  list-style: none;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item{
+  margin: 25px 0;
+  transition: all 300ms ease;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item:hover{
+  color: #CFFC;
+  cursor: pointer;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item:hover{
+  cursor: pointer;
+}
+
+#footer .footer-content .footer-menu p {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #919496;
+  font-size: 0.8rem;
+}
+
+.socials {
+  display: flex;
+
+}
+
+.socials i{
+  margin: 0 20px;
+  font-size: 1.3rem;
+  transition: all 300ms ease;
+}
+
+.socials i:hover{
+  color: var(--default-green);
+  cursor: pointer;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 60%;
+  margin: auto;
+  font-weight: bold;
+  color: #919496;
+  font-size: 0.75rem;
+  padding-top: 30px;
+}
+
+.footer-info .footer-info-items{
+  display: flex;
+  list-style: none;
+}
+
+.footer-info .footer-info-items .footer-info-item{
+  margin: 0 10px;
+  font-weight: bold;
+  color: #919496;
+  font-size: 0.75rem;
+  transition: all 300ms ease;
+}
+
+.footer-info .footer-info-items .footer-info-item:hover{
+  color: #CFFC;
+  cursor: pointer;
+}
+
+.footer-info .rights .country{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.footer-info .rights .country .brazil-flag{
+  height: 15px;
+  width: auto;
+  display: inline-block;
+  margin-left: 10px;
 }
